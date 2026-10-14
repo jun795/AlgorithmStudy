@@ -4,14 +4,13 @@ public class Main {
     public static int n;
     public static int m;
 
-    public static void minMulti(int n, int m) {
+    public static int minMulti(int n, int m) {
         int minNum = Math.min(n, m);
         int maxNum = Math.max(n, m);
         int i = 1;
         while (true) {
             if((maxNum*i) % minNum == 0){
-                System.out.println(maxNum*i);
-                break;
+                return (maxNum*i);
             }
             i++;
         }
@@ -22,6 +21,7 @@ public class Main {
         n = sc.nextInt();
         m = sc.nextInt();
 
-        minMulti(n, m);
+        int ans = minMulti(n, m);
+        System.out.println(ans);
     }
 }
