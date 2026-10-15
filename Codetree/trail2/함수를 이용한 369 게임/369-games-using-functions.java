@@ -1,14 +1,10 @@
 import java.util.Scanner;
 public class Main {
-    // public static boolean isContain369(int A, int B){
-    //     return 
-    // }
-
     public static boolean isMagicNum(int A){
         String strA = Integer.toString(A);
+        if(A % 3 == 0) return true;
         for(int i=0; i<strA.length(); i++){
-            if(strA.charAt(i) == '3' || strA.charAt(i) == '6' || strA.charAt(i) == '9'
-               || A % 3 == 0){
+            if(strA.charAt(i) == '3' || strA.charAt(i) == '6' || strA.charAt(i) == '9'){
                 return true;
             }
         }
